@@ -12,7 +12,7 @@ public class CyclicBinarySearch {
         int m =s+(e-s)/2;
         if(arr[m]==target) return m;
 
-        if(arr[s]<arr[m]){
+        if(arr[s]<=arr[m]){
             if(target>=arr[s] && target<=arr[m]) return indexOfTarget(arr,s,m-1,target);
             else return indexOfTarget(arr,m+1,e,target );
         }
